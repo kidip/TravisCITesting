@@ -1,7 +1,13 @@
-language: python
-python:
-    - "3.7"
-install:
-  - pip install -r requirements.txt
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker pull asciidoctor/docker-asciidoctor
+
 script:
-  - pytest
+  - docker run -v $TRAVIS_BUILD_DIR:/docs/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor README.adoc -o /docs/index.html
+
+after_error:
+  - docker logs asciidoc-to-html
