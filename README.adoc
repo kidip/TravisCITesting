@@ -2,6 +2,13 @@
 :pygments-style: monokai
 = Readme
 
+.Current Build Status
+[options="header,footer", valign="middle"]
+|===================
+| Branch | Status
+| master | image:https://travis-ci.com/kidip/TravisCITesting.svg?branch=master["Build Status", link="https://travis-ci.com/kidip/TravisCITesting"]
+|===================
+
 This is the readme!
 
 [source,python]
