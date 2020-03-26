@@ -1,0 +1,22 @@
+:source-highligher: pygments
+:pygments-style: monokai
+:author: Ken Powell
+:email: ken_powell@apple.com
+:revnumber: 0.5
+:revdate: 03-17-2020
+:revremark: First draft
+
+*Bold Text* +
+_This is italics_
+
+[source,python]
+----
+include::fakePython.py[]
+----
+
+[cols=2*,options=header]
+!===========================
+| Header 1  | Header 2
+| Value 1   | Value 2
+| Value 3   | Value 4
+2+^| Value 5
