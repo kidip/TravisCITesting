@@ -1,3 +1,15 @@
+:source-highlighter: pygments
+:pygments-style: monokai
 = Readme
 
 This is the readme!
+
+[source,python]
+----
+import json
+
+with open('doc.json') as j:
+  data = json.load(j)
+ 
+print(data)
+----
