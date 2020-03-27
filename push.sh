@@ -14,8 +14,13 @@ commit_website_files() {
 
 push() {
     git remote add origin https://kidip:${GH_TOKEN}@github.com/kidip/TravisCITesting
-    git push origin $TRAVIS_BRANCH
+    git push origin $BRANCH
 }
+
+if [[ "$TRAVIS_BRANCH" != "master" ]]; then
+    echo "We are not on master branch, or not merging to master"
+    exit 0
+fi
 
 setup_git
 commit_website_files
