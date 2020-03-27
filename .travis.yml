@@ -1,13 +1,14 @@
 sudo: required
 before_install:
-  - sudo apt-get install asciidoctor
-  - sudo gem install pygments.rb
+- sudo apt-get install asciidoctor
+- sudo gem install pygments.rb
 script:
-  - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
-  - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH=$BRANCH"
-  - asciidoctor README.adoc -o docs/index.html
+- export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH;
+  else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
+- echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH=$BRANCH"
+- asciidoctor README.adoc -o docs/index.html
 after_success:
-  - sh push.sh
+- sh push.sh
 env:
   global:
-    secure: pP4m/bQzs6S8VDMGjsrk/Ukf7L9c+4pi/Nke3sDd0xcxcCY+tZWNOApS1B3cWbxQw+8F+pJziyx7x5XWEJpSi+898G/9FYOfrVjMaUVaJlR2je3WMo4PamYEw7fNuQczvzmREqSrVyAtFtpaCl8MPuYJhrm002/ZTXF/e00AtAQYbP1D/xdrxC41/Ee27Kx187R42hmWaE52BqYWkTmrf2vCNKxT6LV25yfF01DO2dYWCh9cm0nnLfThWR7COUxvjtAtnQYJ91sgZkJiV+IWsUHaPBhI9IGFFe1S4GV9UNwDXTW3OWfEVmj+8W6x7KoeEkVZjDKthFKyeeqn3/LpOFnZZBepQ5EjUQehtD6vZhQqxb1oO4xnIAoPF9DHsFOvXriqfJow6GO2Pd0U7nyR3a28am/4DcmGNSpUg9O8BQ2y/tO2O/STFVWEPSNl2hQ8QiOy3Ojklf5TTl8c0QvfIj7ujWsP+/aCcb1kTqZNH4kJg9Y29KE5yvpaC5oYZtx1d9w9en3CJp9/Thc7bBRDRTdoUi8xG+eRftKQ6Wn4kfu+XlOTrAhfyt9BWvNrBYKxpFg8Dd3UupjhYMCwTw8L1szTyu/V1BO2hx0bjdzG84o66gkgMVPZC5oF3dUkMtl4qldUvoyvnTRk0rMyGtziVqNNktr0uoGWk1bIXkPetjw=
+    secure: W1go7MepUKv6uwFaVZRKff9a3wPeQkXeD2QgYNDxpRsF7PMfXpFaDO2UMmNiwwPqQiCgtc89HR7VlcFuGs9UJYHEN5x5x/tHdMIRNMfafoGX9wUe3+/Igl0MTvlhV2jGhJRBOi0j1wxCTqk7AYyxZQrDsJbOwTlyp7MEuKUP88ATTjqOOKLOAxnh7tTYvkt6tM9nbkkSFysX6AQYez4eoTkcjPF/HLJzCcu4hEKt8aQCf9CECfJ6e/Xhl4n60ppRFP9mFxCtoz4Bt6yYIcYio/G8EQjW7bV9bIYtQqaeYVC+eHpdSMnY0d9ApuKY9anNjX3Oft2MbpuuqiW/QWI9/ze3z583oShWZyGZ+SiopJu7f5jk6j1xojbdFnX5xjKCy9ZxJMq1/egV0r+GDApKBnk1ecnovaqlOmTLDf0SE8JVZhuVMgWJLO4SbYs1ZJnmAsporBo6SD+FU0ZovGIYeJMauwu90idv3Y3KkKHoZC1Y2O8lNP3TL5HaWkEQ6AGHO9mUQgJmwnOW9WNlOl8a6/sSjAkYCdJA8Gt6/btKuu6omquMzFns9o0cnF4kbE3hTAtlJKaoH/Es1qYrvLEWpbkWu8WTQBiSXcfnsT48fWocL5KbHu3ONK1zVyblhp6Nu2pH0sF7T8S57d0K+j39JEaXahPyDM9VQ3AukH1z+8c=
