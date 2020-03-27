@@ -8,7 +8,7 @@ setup_git() {
 
 commit_website_files() {
     echo 'Checking out files?'
-    git add docs/*
+    git add ./docs/*
     git commit -m 'Adding documents'
 }
 
