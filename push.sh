@@ -8,14 +8,13 @@ setup_git() {
 
 commit_website_files() {
     echo 'Checking out files?'
-    git checkout -b $TRAVIS_BRANCH
     git add docs/*
     git commit -m 'Adding documents'
 }
 
 push() {
     echo 'Seriously can this work?'
-    git remote add origin https://${GH_TOKEN}@github.com/kidip/TravisCITesting
+    git remote add origin https://<me>:${GH_TOKEN}@github.com/kidip/TravisCITesting
     git push origin $TRAVIS_BRANCH
 }
 
