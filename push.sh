@@ -13,7 +13,7 @@ commit_website_files() {
 }
 
 push() {
-    git remote add origin https://<me>:${GH_TOKEN}@github.com/kidip/TravisCITesting
+    git remote add origin https://kidip:${GH_TOKEN}@github.com/kidip/TravisCITesting
     git push origin $TRAVIS_BRANCH
 }
 
