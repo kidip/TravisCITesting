@@ -8,6 +8,7 @@ script:
   - asciidoctor README.adoc -o docs/index.html
 after_success:
   - sh push.sh
+  if: branch = master
 env:
   global:
     secure: pP4m/bQzs6S8VDMGjsrk/Ukf7L9c+4pi/Nke3sDd0xcxcCY+tZWNOApS1B3cWbxQw+8F+pJziyx7x5XWEJpSi+898G/9FYOfrVjMaUVaJlR2je3WMo4PamYEw7fNuQczvzmREqSrVyAtFtpaCl8MPuYJhrm002/ZTXF/e00AtAQYbP1D/xdrxC41/Ee27Kx187R42hmWaE52BqYWkTmrf2vCNKxT6LV25yfF01DO2dYWCh9cm0nnLfThWR7COUxvjtAtnQYJ91sgZkJiV+IWsUHaPBhI9IGFFe1S4GV9UNwDXTW3OWfEVmj+8W6x7KoeEkVZjDKthFKyeeqn3/LpOFnZZBepQ5EjUQehtD6vZhQqxb1oO4xnIAoPF9DHsFOvXriqfJow6GO2Pd0U7nyR3a28am/4DcmGNSpUg9O8BQ2y/tO2O/STFVWEPSNl2hQ8QiOy3Ojklf5TTl8c0QvfIj7ujWsP+/aCcb1kTqZNH4kJg9Y29KE5yvpaC5oYZtx1d9w9en3CJp9/Thc7bBRDRTdoUi8xG+eRftKQ6Wn4kfu+XlOTrAhfyt9BWvNrBYKxpFg8Dd3UupjhYMCwTw8L1szTyu/V1BO2hx0bjdzG84o66gkgMVPZC5oF3dUkMtl4qldUvoyvnTRk0rMyGtziVqNNktr0uoGWk1bIXkPetjw=
