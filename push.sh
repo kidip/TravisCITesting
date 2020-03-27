@@ -13,8 +13,8 @@ commit_website_files() {
 }
 
 push() {
-    git remote add origin https://kidip:${GH_TOKEN}@github.com/kidip/TravisCITesting
-    git push origin $BRANCH
+    git remote add origin-authed https://kidip:${GH_TOKEN}@github.com/kidip/TravisCITesting.git/
+    git push origin-authed $BRANCH
 }
 
 if [[ "$TRAVIS_BRANCH" != "master" ]]; then
