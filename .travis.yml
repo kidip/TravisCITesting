@@ -2,6 +2,7 @@ sudo: required
 
 before_install:
   - sudo apt-get install asciidoctor
+  - sudo gem install pygments.rb
 
 script:
   - asciidoctor README.adoc -o docs/index.html
