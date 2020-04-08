@@ -44,4 +44,4 @@ if match and len(match) > 0:
 
 <1> Compile the regular expression
 <2> Search for all matches in a string
-<3> Should pring 'abc'
+<3> Should pring 'abc' yup
