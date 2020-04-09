@@ -1,0 +1,68 @@
+= Fake Lib
+:author: Mr Fake
+:email: fake@fake_lib.com
+:revnumber: 0.1
+:revdate: 03.09.2020
+:revremark: First draft
+:sectnums:
+:toc:
+:toclevels: 4
+:toc-title: Contents
+:icons: font
+
+WARNING: The following document is completely fake, nothing is really truly documented here
+
+== Description
+
+This project was designed to show the differences in out and documentation for a small fake project.
+
+.It desires to achieve the following
+* Documents things
+* Should be written in AsciiDoc
+* Should have a header like this
++
+----
+= Title
+:author: <authorname>
+:email: <authoremail>
+:revnumber: <versionnumber>
+:revdate: <date>
+:revremark: <comment>
+----
++
+* Be the best it can be
++
+--
+NOTE: This is probably not possible, but we are going to try
+--
++
+* Actually document something
+
+== Installation
+
+There is nothing to install! Skip to <<Usage>> for more information
+
+== Usage
+
+.Steps
+1. Import the method you want to call
++
+--
+[source,python]
+from fake_lib import fake_function_one <1>
+
+<1> You can import any other method as well
+--
++
+2. Now you can call this function in your code
++
+--
+[source,python]
+----
+result = fake_function_one(2,3)
+print(result)
+----
+--
++
+3. Profit
+
