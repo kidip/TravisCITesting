@@ -1,0 +1,53 @@
+:source-highlighter: pygments
+:pygments-style: monokai
+:source-highlighter: pygments
+:pygments-style: monokai
+:icons: font
+= Readme for TravisCITest
+Ken Powell <ken_powell@apple.com>
+v0.5, 03-27-2020
+
+.Current Build Status
+[options="header,footer", valign="middle"]
+|===================
+| Branch | Status
+| master | image:https://travis-ci.com/kidip/TravisCITesting.svg?branch=master["Build Status", link="https://travis-ci.com/kidip/TravisCITesting"]
+|===================
+
+This is the readme!
+
+[source,python]
+----
+import json
+
+with open('doc.json') as j:
+  data = json.load(j)
+ 
+print(data)
+----
+
+There is another cool thing we can do with Python!!
+[source,python]
+----
+import re
+
+find_abc_re = re.compile(r'[abc]*') <1>
+
+theString = 'abc'
+
+match = find_abc_re.findall(theString) <2>
+
+if match and len(match) > 0:
+  for s in match:
+    print(s) <3>
+----
+
+<1> Compile the regular expression
+<2> Search for all matches in a string
+<3> Should print 'abc' yup
+<4> yup
+
+[source,python]
+----
+print("test")
+----
